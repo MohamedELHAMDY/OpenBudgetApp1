@@ -46,10 +46,10 @@ export function Sidebar() {
       <nav className="flex-1 px-4">
         {menuItems.map((item) => (
           <Link key={item.href} href={item.href}>
-            <a className="flex items-center gap-3 px-4 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md cursor-pointer">
+            <div className="flex items-center gap-3 px-4 py-2 text-sidebar-foreground hover:bg-sidebar-accent rounded-md cursor-pointer">
               <item.icon className="h-5 w-5" />
               {item.label}
-            </a>
+            </div>
           </Link>
         ))}
       </nav>
