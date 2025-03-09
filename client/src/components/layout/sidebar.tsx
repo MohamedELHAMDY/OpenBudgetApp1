@@ -15,7 +15,7 @@ export function Sidebar() {
   const menuItems = [
     {
       icon: LayoutDashboard,
-      label: "Dashboard",
+      label: "Tableau de Bord",
       href: "/",
     },
     {
@@ -25,19 +25,24 @@ export function Sidebar() {
     },
     {
       icon: PieChart,
-      label: "Budget Analysis",
+      label: "Analyse Budgétaire",
       href: "/analysis",
     },
     {
       icon: BookOpen,
-      label: "Education",
+      label: "Éducation",
       href: "/education",
     },
   ];
 
   return (
     <div className="w-64 bg-sidebar border-r border-border flex flex-col">
-      <div className="p-6">
+      <div className="p-6 flex items-center gap-3">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
+          alt="Drapeau du Maroc"
+          className="h-6 w-auto"
+        />
         <h1 className="text-xl font-bold text-sidebar-foreground">
           Mizaniyatona
         </h1>
@@ -61,7 +66,7 @@ export function Sidebar() {
           onClick={() => logoutMutation.mutate()}
         >
           <LogOut className="mr-2 h-5 w-5" />
-          Logout
+          Déconnexion
         </Button>
       </div>
     </div>

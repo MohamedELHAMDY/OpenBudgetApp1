@@ -50,16 +50,16 @@ export default function AuthPage() {
       <div className="flex items-center justify-center p-8">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Welcome to Mizaniyatona</CardTitle>
+            <CardTitle>Bienvenue sur Mizaniyatona</CardTitle>
             <CardDescription>
-              Your gateway to budget transparency
+              Votre portail vers la transparence budgétaire
             </CardDescription>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="login">
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="login">Login</TabsTrigger>
-                <TabsTrigger value="register">Register</TabsTrigger>
+                <TabsTrigger value="login">Connexion</TabsTrigger>
+                <TabsTrigger value="register">Inscription</TabsTrigger>
               </TabsList>
 
               <TabsContent value="login">
@@ -75,7 +75,7 @@ export default function AuthPage() {
                       name="username"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Username</FormLabel>
+                          <FormLabel>Nom d'utilisateur</FormLabel>
                           <FormControl>
                             <Input {...field} />
                           </FormControl>
@@ -88,7 +88,7 @@ export default function AuthPage() {
                       name="password"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Password</FormLabel>
+                          <FormLabel>Mot de passe</FormLabel>
                           <FormControl>
                             <Input type="password" {...field} />
                           </FormControl>
@@ -101,7 +101,7 @@ export default function AuthPage() {
                       className="w-full"
                       disabled={loginMutation.isPending}
                     >
-                      Login
+                      Se connecter
                     </Button>
                   </form>
                 </Form>
@@ -120,7 +120,7 @@ export default function AuthPage() {
                       name="username"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Username</FormLabel>
+                          <FormLabel>Nom d'utilisateur</FormLabel>
                           <FormControl>
                             <Input {...field} />
                           </FormControl>
@@ -133,7 +133,7 @@ export default function AuthPage() {
                       name="password"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Password</FormLabel>
+                          <FormLabel>Mot de passe</FormLabel>
                           <FormControl>
                             <Input type="password" {...field} />
                           </FormControl>
@@ -146,7 +146,7 @@ export default function AuthPage() {
                       className="w-full"
                       disabled={registerMutation.isPending}
                     >
-                      Register
+                      S'inscrire
                     </Button>
                   </form>
                 </Form>
@@ -159,12 +159,12 @@ export default function AuthPage() {
       <div className="hidden md:flex items-center justify-center bg-primary/10 p-8">
         <div className="max-w-lg text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">
-            Open Budget Lab
+            Laboratoire du Budget Ouvert
           </h1>
           <p className="text-lg text-muted-foreground">
-            Join us in promoting budget transparency and citizen participation.
-            Access clear visualizations, participate in discussions, and help shape
-            the future of public finance.
+            Rejoignez-nous pour promouvoir la transparence budgétaire et la participation citoyenne au Maroc. 
+            Accédez à des visualisations claires, participez aux discussions et contribuez à façonner 
+            l'avenir des finances publiques de notre pays.
           </p>
         </div>
       </div>

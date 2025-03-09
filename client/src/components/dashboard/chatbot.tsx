@@ -15,7 +15,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      content: "Hi! I'm your budget assistant. How can I help you today?",
+      content: "Bonjour! Je suis votre assistant budgétaire. Comment puis-je vous aider aujourd'hui?",
       sender: "bot",
     },
   ]);
@@ -36,7 +36,7 @@ export function Chatbot() {
         {
           id: Date.now() + 1,
           content:
-            "I'm a demo chatbot. In the full version, I'll be able to answer your budget-related questions!",
+            "Je suis une version de démonstration. Dans la version complète, je pourrai répondre à vos questions sur le budget du Maroc!",
           sender: "bot",
         },
       ]);
@@ -74,7 +74,7 @@ export function Chatbot() {
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask a question about the budget..."
+            placeholder="Posez une question sur le budget..."
             onKeyPress={(e) => e.key === "Enter" && handleSend()}
           />
           <Button onClick={handleSend} size="icon">
