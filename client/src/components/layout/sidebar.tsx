@@ -1,16 +1,22 @@
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 import {
   LayoutDashboard,
   MessageSquare,
   PieChart,
   BookOpen,
   LogOut,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { Link } from "wouter";
+import { useTheme } from "@/hooks/use-theme";
 
 export function Sidebar() {
   const { logoutMutation } = useAuth();
+  const { theme, setTheme } = useTheme();
 
   const menuItems = [
     {
@@ -59,7 +65,19 @@ export function Sidebar() {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-border">
+      <div className="p-4 border-t border-border space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Sun className="h-4 w-4" />
+            <Label>Mode Sombre</Label>
+            <Moon className="h-4 w-4" />
+          </div>
+          <Switch
+            checked={theme === "dark"}
+            onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+          />
+        </div>
+
         <Button
           variant="ghost"
           className="w-full justify-start"
