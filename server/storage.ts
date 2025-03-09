@@ -24,17 +24,47 @@ export class MemStorage implements IStorage {
     // Add some initial budget data
     this.budgetItems.set(1, {
       id: 1,
-      category: "Education",
+      category: "Éducation",
       amount: 1000000,
       year: 2024,
-      description: "Primary education funding"
+      description: "Financement de l'éducation primaire"
     });
     this.budgetItems.set(2, {
       id: 2,
-      category: "Healthcare",
+      category: "Santé",
       amount: 2000000,
       year: 2024,
-      description: "Public hospitals and clinics"
+      description: "Hôpitaux et cliniques publics"
+    });
+    this.budgetItems.set(3, {
+      id: 3,
+      category: "Infrastructure",
+      amount: 1500000,
+      year: 2024,
+      description: "Développement des routes et transport"
+    });
+    this.budgetItems.set(4, {
+      id: 4,
+      category: "Agriculture",
+      amount: 800000,
+      year: 2024,
+      description: "Soutien au secteur agricole"
+    });
+
+    // Add some initial forum posts
+    this.forumPosts.set(1, {
+      id: 1,
+      userId: 1,
+      title: "Importance de l'éducation dans le budget 2024",
+      content: "Le secteur de l'éducation représente une part importante du budget. Quelles sont vos opinions sur cette allocation?",
+      createdAt: new Date()
+    });
+    this.forumPosts.set(2, {
+      id: 2,
+      userId: 1,
+      title: "Investissements dans la santé publique",
+      content: "Discussion sur les nouveaux investissements dans les hôpitaux publics et les centres de santé.",
+      createdAt: new Date()
     });
   }
 

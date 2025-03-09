@@ -17,21 +17,23 @@ export function NewsFeed() {
   return (
     <Card className="h-[500px]">
       <CardHeader>
-        <CardTitle>Latest Discussions</CardTitle>
+        <CardTitle>Espace de Participation Citoyenne</CardTitle>
       </CardHeader>
       <CardContent>
         <ScrollArea className="h-[400px] pr-4">
-          {posts?.map((post) => (
-            <div key={post.id} className="mb-4 p-4 bg-muted rounded-lg">
-              <h4 className="font-semibold">{post.title}</h4>
-              <p className="text-sm text-muted-foreground mt-1">
-                {post.content}
-              </p>
-              <p className="text-xs text-muted-foreground mt-2">
-                {new Date(post.createdAt).toLocaleDateString()}
-              </p>
-            </div>
-          ))}
+          <div className="space-y-4">
+            {posts?.map((post) => (
+              <div key={post.id} className="mb-4 p-4 bg-muted rounded-lg">
+                <h4 className="font-semibold">{post.title}</h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {post.content}
+                </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  {new Date(post.createdAt).toLocaleDateString('fr-FR')}
+                </p>
+              </div>
+            ))}
+          </div>
         </ScrollArea>
       </CardContent>
     </Card>

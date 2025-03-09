@@ -1,0 +1,33 @@
+Create an interactive platform named Mizaniyatouna: Open Budget Lab for Transparency and Citizen Participation. The platform should include the following key features:
+
+Main Features:
+Interactive Dashboard
+Display dynamic visualizations of budget data (charts, maps, comparators) based on open data from the Ministry of Economy and Finance.
+
+Integrated Chatbot
+An intelligent assistant to answer budget-related questions, explain economic concepts, and guide users through the platform.
+
+News Feed & Social Media Integration
+A section where citizens can comment and react to budget developments in real-time, with integration to Facebook, Twitter, and LinkedIn.
+
+Citizen Participation Space
+A forum or survey section for citizens to express their budget priorities and vote on financial allocations.
+
+Analysis Page
+Detailed articles and reports analyzing budget trends, reforms, and economic impacts.
+
+Educational Section
+Videos, infographics, and quizzes to simplify public finance management concepts and educate the public.
+
+User Experience:
+A clean, modern design based on institutional colors (e.g., blue, green) to inspire trust and accessibility.
+A smooth interface with simple navigation allowing users to filter data by sector, region, or project.
+A personalized space where users can create accounts to receive notifications on budget updates in their region or specific sector.
+Technologies & Integrations:
+Chatbot for Interactive Assistance: Integrated with the platform to guide users.
+Data & Collections for Storing Budget Data: For managing and displaying budget information.
+Forum & Blogs for Citizen Interaction: For discussions and analyses.
+Open Data API for Auto-Retrieving New Budget Data: To keep the platform updated.
+Social Sharing Tools: For encouraging engagement and discussions across platforms.
+Goal:
+The objective is to create an engaging, educational, and collaborative platform that allows citizens to easily access, interact with, and participate in the national budget process.
