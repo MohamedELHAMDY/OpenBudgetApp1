@@ -1,0 +1,26 @@
+Crée une plateforme interactive appelée Mizaniyatona : Open Budget Lab pour promouvoir la transparence budgétaire et la participation citoyenne. Le site doit être moderne, intuitif et responsive.
+
+📌 Fonctionnalités principales :
+✅ Tableau de bord interactif – Visualisations dynamiques des données budgétaires (graphiques, cartes, comparateurs) via Elementor Charts et JetEngine Dynamic Data.
+✅ Chatbot AI – Assistant intelligent avec ChatGPT API pour répondre aux questions sur le budget et guider les citoyens.
+✅ Feed d’actualités & Réseaux Sociaux – Section intégrée avec WP Social Ninja pour les commentaires et réactions en temps réel depuis Facebook, Twitter et LinkedIn.
+✅ Espace de participation citoyenne – Forum et sondages avec BuddyPress et WP-Polls pour que les citoyens expriment leurs priorités budgétaires.
+✅ Page d’analyses – Articles et rapports générés avec AI Content Generator et optimisés via Rank Math SEO.
+✅ Section éducative – Vidéos, infographies et quiz interactifs avec LearnDash pour vulgariser les finances publiques.
+
+💡 Expérience utilisateur :
+🎨 Design épuré et moderne, basé sur des couleurs institutionnelles (bleu, vert, blanc) pour inspirer confiance et accessibilité.
+🖥️ Interface fluide avec Elementor Pro, permettant de filtrer les données par secteur, région ou projet.
+🔔 Espace utilisateur : Comptes personnalisés via Ultimate Member pour suivre les mises à jour budgétaires et recevoir des alertes.
+
+🚀 Technologies et intégrations :
+🔹 10Web AI Website Builder pour un design optimisé et responsive.
+🔹 WPDataTables pour l’affichage des données budgétaires sous forme de graphiques interactifs.
+🔹 Open Data API – Intégration pour récupérer automatiquement les nouvelles données budgétaires.
+🔹 OneSignal Push Notifications pour informer les utilisateurs des mises à jour importantes.
+🔹 Social Sharing Tools – Encourager l’engagement avec Monarch Social Sharing et Social Snap.
+
+📢 L’objectif est de créer une plateforme engageante, éducative et collaborative, offrant un accès clair, interactif et démocratique aux informations budgétaires.
+
+🛠️ Génère le site avec ces spécifications et une identité visuelle professionnelle."
+
