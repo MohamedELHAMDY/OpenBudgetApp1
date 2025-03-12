@@ -21,9 +21,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 export default function AuthPage() {
   const { user, loginMutation, registerMutation } = useAuth();
+  const [showResetForm, setShowResetForm] = useState(false);
 
   const loginForm = useForm({
     resolver: zodResolver(insertUserSchema),
@@ -38,6 +40,12 @@ export default function AuthPage() {
     defaultValues: {
       username: "",
       password: "",
+    },
+  });
+
+  const resetForm = useForm({
+    defaultValues: {
+      email: "",
     },
   });
 
@@ -103,6 +111,14 @@ export default function AuthPage() {
                     >
                       Se connecter
                     </Button>
+                    <Button
+                      type="button"
+                      variant="link"
+                      className="w-full"
+                      onClick={() => setShowResetForm(true)}
+                    >
+                      Mot de passe oublié?
+                    </Button>
                   </form>
                 </Form>
               </TabsContent>
@@ -152,6 +168,41 @@ export default function AuthPage() {
                 </Form>
               </TabsContent>
             </Tabs>
+
+            {showResetForm && (
+              <div className="mt-4 p-4 border rounded-lg">
+                <h3 className="text-lg font-semibold mb-4">
+                  Réinitialiser le mot de passe
+                </h3>
+                <Form {...resetForm}>
+                  <form className="space-y-4">
+                    <FormField
+                      control={resetForm.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input type="email" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <div className="flex gap-2">
+                      <Button type="submit">Envoyer le lien</Button>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setShowResetForm(false)}
+                      >
+                        Annuler
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

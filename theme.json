@@ -2,5 +2,12 @@
   "variant": "professional",
   "primary": "hsl(357, 67%, 45%)",
   "appearance": "system",
-  "radius": 0.5
+  "radius": 0.5,
+  "colors": {
+    "chart-1": "357 67% 45%",
+    "chart-2": "145 50% 35%",
+    "chart-3": "215 65% 45%",
+    "chart-4": "35 85% 45%",
+    "chart-5": "275 55% 45%"
+  }
 }

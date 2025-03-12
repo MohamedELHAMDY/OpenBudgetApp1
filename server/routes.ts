@@ -29,6 +29,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.status(201).json(post);
   });
 
+  // Post likes
+  app.post("/api/forum/:postId/like", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+    const post = await storage.likePost(parseInt(req.params.postId), req.user!.id);
+    res.json(post);
+  });
+
+  // Budget terms
+  app.get("/api/budget-terms", async (req, res) => {
+    const terms = await storage.getBudgetTerms();
+    res.json(terms);
+  });
+
   // Survey routes
   app.get("/api/surveys", async (req, res) => {
     const surveys = await storage.getSurveys();

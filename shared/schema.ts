@@ -27,6 +27,22 @@ export const forumPosts = pgTable("forum_posts", {
   title: text("title").notNull(),
   content: text("content").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
+  likes: integer("likes").notNull().default(0),
+  shares: integer("shares").notNull().default(0),
+});
+
+export const postLikes = pgTable("post_likes", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull(),
+  postId: integer("post_id").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const budgetTerms = pgTable("budget_terms", {
+  id: serial("id").primaryKey(),
+  term: text("term").notNull(),
+  definition: text("definition").notNull(),
+  category: text("category").notNull(),
 });
 
 export const surveys = pgTable("surveys", {
@@ -53,6 +69,7 @@ export const insertBudgetItemSchema = createInsertSchema(budgetItems);
 export const insertForumPostSchema = createInsertSchema(forumPosts);
 export const insertSurveySchema = createInsertSchema(surveys);
 export const insertFeedbackSchema = createInsertSchema(feedback);
+export const insertBudgetTermSchema = createInsertSchema(budgetTerms);
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
@@ -60,3 +77,4 @@ export type BudgetItem = typeof budgetItems.$inferSelect;
 export type ForumPost = typeof forumPosts.$inferSelect;
 export type Survey = typeof surveys.$inferSelect;
 export type Feedback = typeof feedback.$inferSelect;
+export type BudgetTerm = typeof budgetTerms.$inferSelect;
