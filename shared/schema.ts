@@ -15,6 +15,10 @@ export const budgetItems = pgTable("budget_items", {
   amount: integer("amount").notNull(),
   year: integer("year").notNull(),
   description: text("description").notNull(),
+  quarter: integer("quarter"),  // New: track quarterly data
+  region: text("region"),       // New: track regional data
+  program: text("program"),     // New: track specific programs
+  type: text("type"),          // New: expense type (operating/investment)
 });
 
 export const forumPosts = pgTable("forum_posts", {

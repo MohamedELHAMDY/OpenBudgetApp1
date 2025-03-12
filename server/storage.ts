@@ -21,34 +21,78 @@ export class MemStorage implements IStorage {
     this.currentId = { users: 1, budgetItems: 1, forumPosts: 1, surveys: 1 };
     this.sessionStore = new MemoryStore({ checkPeriod: 86400000 });
 
-    // Add some initial budget data
+    // Add more detailed budget data
     this.budgetItems.set(1, {
       id: 1,
       category: "Éducation",
       amount: 1000000,
       year: 2024,
-      description: "Financement de l'éducation primaire"
+      description: "Financement de l'éducation primaire",
+      quarter: 1,
+      region: "Casablanca-Settat",
+      program: "Réforme de l'Education",
+      type: "operating"
     });
+
     this.budgetItems.set(2, {
       id: 2,
       category: "Santé",
       amount: 2000000,
       year: 2024,
-      description: "Hôpitaux et cliniques publics"
+      description: "Hôpitaux et cliniques publics",
+      quarter: 1,
+      region: "Rabat-Salé-Kénitra",
+      program: "Infrastructure Sanitaire",
+      type: "investment"
     });
+
     this.budgetItems.set(3, {
       id: 3,
       category: "Infrastructure",
       amount: 1500000,
       year: 2024,
-      description: "Développement des routes et transport"
+      description: "Développement des routes et transport",
+      quarter: 1,
+      region: "Tanger-Tétouan-Al Hoceïma",
+      program: "Connectivité Nationale",
+      type: "investment"
     });
+
     this.budgetItems.set(4, {
       id: 4,
       category: "Agriculture",
       amount: 800000,
       year: 2024,
-      description: "Soutien au secteur agricole"
+      description: "Soutien au secteur agricole",
+      quarter: 1,
+      region: "Fès-Meknès",
+      program: "Plan Maroc Vert",
+      type: "operating"
+    });
+
+    // Add historical data
+    this.budgetItems.set(5, {
+      id: 5,
+      category: "Éducation",
+      amount: 950000,
+      year: 2023,
+      description: "Financement de l'éducation primaire",
+      quarter: 4,
+      region: "Casablanca-Settat",
+      program: "Réforme de l'Education",
+      type: "operating"
+    });
+
+    this.budgetItems.set(6, {
+      id: 6,
+      category: "Santé",
+      amount: 1800000,
+      year: 2023,
+      description: "Hôpitaux et cliniques publics",
+      quarter: 4,
+      region: "Rabat-Salé-Kénitra",
+      program: "Infrastructure Sanitaire",
+      type: "investment"
     });
 
     // Add some initial forum posts

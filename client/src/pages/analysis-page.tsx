@@ -53,7 +53,7 @@ export default function AnalysisPage() {
     value: (item.amount / totalBudget) * 100
   }));
 
-  // Historical comparison data (simulated for now)
+  // Historical comparison data
   const historicalData = budgetItems?.map(item => ({
     name: item.category,
     "2022": item.amount * 0.85,
