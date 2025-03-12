@@ -3,6 +3,7 @@ import { BudgetChart } from "@/components/dashboard/budget-chart";
 import { AdvancedCharts } from "@/components/dashboard/advanced-charts";
 import { Chatbot } from "@/components/dashboard/chatbot";
 import { NewsFeed } from "@/components/dashboard/news-feed";
+import { SocialFeed } from "@/components/dashboard/social-feed";
 
 export default function HomePage() {
   return (
@@ -32,16 +33,21 @@ export default function HomePage() {
 
           <AdvancedCharts />
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="space-y-4">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="space-y-4 md:col-span-2">
               <h2 className="text-2xl font-semibold">Dernières Mises à Jour</h2>
               <NewsFeed />
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Assistant Budgétaire</h2>
-              <Chatbot />
+              <h2 className="text-2xl font-semibold">Réseaux Sociaux</h2>
+              <SocialFeed />
             </div>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold">Assistant Budgétaire</h2>
+            <Chatbot />
           </div>
         </div>
       </main>

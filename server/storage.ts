@@ -1,5 +1,5 @@
 import { IStorage } from "./types";
-import { User, InsertUser, BudgetItem, ForumPost, Survey } from "@shared/schema";
+import { User, InsertUser, BudgetItem, ForumPost, Survey, Feedback } from "@shared/schema";
 import createMemoryStore from "memorystore";
 import session from "express-session";
 
@@ -10,6 +10,7 @@ export class MemStorage implements IStorage {
   private budgetItems: Map<number, BudgetItem>;
   private forumPosts: Map<number, ForumPost>;
   private surveys: Map<number, Survey>;
+  private feedback: Map<number, Feedback>;
   public sessionStore: session.Store;
   private currentId: { [key: string]: number };
 
@@ -18,7 +19,8 @@ export class MemStorage implements IStorage {
     this.budgetItems = new Map();
     this.forumPosts = new Map();
     this.surveys = new Map();
-    this.currentId = { users: 1, budgetItems: 1, forumPosts: 1, surveys: 1 };
+    this.feedback = new Map();
+    this.currentId = { users: 1, budgetItems: 1, forumPosts: 1, surveys: 1, feedback: 1 };
     this.sessionStore = new MemoryStore({ checkPeriod: 86400000 });
 
     // Add more detailed budget data
@@ -157,6 +159,21 @@ export class MemStorage implements IStorage {
     const newSurvey: Survey = { ...survey, id };
     this.surveys.set(id, newSurvey);
     return newSurvey;
+  }
+
+  async createFeedback(feedback: Omit<Feedback, "id" | "createdAt">): Promise<Feedback> {
+    const id = this.currentId.feedback++;
+    const newFeedback: Feedback = {
+      ...feedback,
+      id,
+      createdAt: new Date()
+    };
+    this.feedback.set(id, newFeedback);
+    return newFeedback;
+  }
+
+  async getFeedback(): Promise<Feedback[]> {
+    return Array.from(this.feedback.values());
   }
 }
 

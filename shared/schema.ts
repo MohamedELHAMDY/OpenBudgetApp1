@@ -36,6 +36,14 @@ export const surveys = pgTable("surveys", {
   active: boolean("active").notNull().default(true),
 });
 
+export const feedback = pgTable("feedback", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull(),
+  subject: text("subject").notNull(),
+  message: text("message").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -44,9 +52,11 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertBudgetItemSchema = createInsertSchema(budgetItems);
 export const insertForumPostSchema = createInsertSchema(forumPosts);
 export const insertSurveySchema = createInsertSchema(surveys);
+export const insertFeedbackSchema = createInsertSchema(feedback);
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type BudgetItem = typeof budgetItems.$inferSelect;
 export type ForumPost = typeof forumPosts.$inferSelect;
 export type Survey = typeof surveys.$inferSelect;
+export type Feedback = typeof feedback.$inferSelect;

@@ -43,6 +43,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.status(201).json(survey);
   });
 
+  // Feedback routes
+  app.post("/api/feedback", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+    const feedback = await storage.createFeedback({
+      ...req.body,
+      userId: req.user!.id,
+    });
+    res.status(201).json(feedback);
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
