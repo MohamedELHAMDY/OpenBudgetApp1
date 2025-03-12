@@ -1,0 +1,30 @@
+UI/UX & Visuals:
+
+"Refine the budget chart: Increase size, add clear axis labels, display data point values, and add a data source description below. Provide a screenshot."
+"Enhance the chatbot UI: Add a clear input field, use chat bubbles for responses, and implement a loading indicator. Provide a screenshot/video."
+"Improve forum navigation: Implement filters for budget categories and a search bar for posts. Provide a screenshot."
+"Add a sector breakdown: Create a pie chart showing budget allocation percentages per sector. Ensure clear labels and percentages. Provide a screenshot."
+"Implement budget comparison: Create a line chart for budget trends over 5 years. Allow sector and time period selection. Provide a screenshot/video."
+"Add a Moroccan map: Display a map of Morocco with regional budget data visualizations. Provide a screenshot."
+"Add a visual representation of budget categories: use icons to represent different budget categories. Provide a screenshot."
+Functionality & Features:
+
+"Implement social media sharing: Add 'Share' buttons to forum posts, with options for Facebook and Twitter. Provide a screenshot/video."
+"Integrate a social media feed: Display relevant social media posts (e.g., tweets) in a dashboard section. Provide a screenshot."
+"Implement a user feedback form: Allow users to submit feedback on the platform. Provide a screenshot."
+"Add a glossary: Create a glossary of key budget terms and definitions. Provide a screenshot."
+"Implement user profiles: Allow users to create profiles and save their favorite content. Provide a screenshot."
+"Add a notification system: Notify users of new forum posts or budget updates. Provide a screenshot."
+Accessibility & Localization:
+
+"Review color contrast: Ensure compliance with WCAG accessibility standards and adjust colors as needed. Provide a color contrast report."
+"Refine dark mode: Ensure clear visibility and consistent colors in dark mode. Pay attention to text/background contrast. Provide screenshots."
+"Populate sample forum posts: Add relevant posts in clear French, related to the Moroccan budget. Provide screenshots."
+"Review French translation: Ensure accuracy, consistency, and natural language in all user-facing text. Provide a list of corrections."
+"Add regional language support: If applicable, add support for additional languages spoken in Morocco. Provide a screenshot."
+Data & Analysis:
+
+"Add a detailed budget data table: Display the raw budget data in a table format. Provide a screenshot."
+"Implement data export: Allow users to export budget data in CSV or Excel format. Provide a demonstration."
+"Add advanced filtering for budget data: Allow users to filter budget data by various criteria (e.g., region, sector, year). Provide a screenshot."
+"Add a budget prediction tool: Implement a tool that allows users to predict future budget allocations based on historical data. Provide a screenshot."
